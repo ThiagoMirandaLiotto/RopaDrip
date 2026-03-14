@@ -185,3 +185,24 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .featuredGrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .featuredGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .featuredCard {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+}

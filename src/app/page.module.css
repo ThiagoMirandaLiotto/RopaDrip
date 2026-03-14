@@ -245,4 +245,23 @@
   .heroButtons {
     flex-direction: column;
   }
+
+  .featuredGrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .featuredGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .featuredItemCard {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
 }
