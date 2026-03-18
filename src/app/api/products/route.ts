@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import prisma from '@/lib/prisma';
 
 export async function POST(request: Request) {
@@ -17,6 +18,7 @@ export async function POST(request: Request) {
       },
     });
 
+    revalidatePath('/');
     return NextResponse.json(product, { status: 201 });
   } catch (error) {
     console.error(error);
