@@ -11,7 +11,7 @@ model Product {
   id          Int      @id @default(autoincrement())
   title       String
   description String?  @db.Text
-  category    String   // "remeras", "pantalones", "gorras", "conjuntos"
+  category    String   // "remeras", "pantalones", "gorras", "conjuntos", "zapatillas", "abrigo", "accesorios"
   price       Float
   images      String   @db.Text // JSON string of image URLs
   isFeatured  Boolean  @default(false)

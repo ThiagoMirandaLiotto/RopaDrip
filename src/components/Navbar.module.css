@@ -65,6 +65,82 @@
   width: 100%;
 }
 
+/* ── Dropdown ── */
+.dropdownContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownBtn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #a0a0a0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+  font-family: inherit;
+}
+
+.dropdownBtn:hover {
+  color: var(--foreground);
+}
+
+.chevron {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.dropdownContainer:hover .chevron {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.dropdownMenuOpen {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(15px);
+}
+
+.dropdownItem {
+  padding: 0.8rem 1rem;
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.dropdownItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--foreground);
+}
+
 /* ── Hamburger button ── */
 .hamburger {
   display: none;
@@ -120,8 +196,17 @@
 }
 
 .mobileMenuOpen {
-  max-height: 300px;
+  max-height: 500px;
   padding: 1rem 2rem 1.5rem;
+}
+
+.mobileCategoryTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .mobileLink {
@@ -140,6 +225,14 @@
 .mobileLink:hover {
   color: var(--foreground);
   padding-left: 0.5rem;
+}
+
+.mobileLinkSpecial {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 0.6rem 0;
+  display: block;
 }
 
 /* ── Responsive breakpoint ── */

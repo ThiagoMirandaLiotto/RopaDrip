@@ -19,7 +19,7 @@ export default async function Home() {
     <div className={styles.main}>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.title}>ROPITA <span className={styles.highlight}>DRIP PA</span>.</h1>
+          <h1 className={styles.title}>DRIP <span className={styles.highlight}>ARG</span>.</h1>
           <p className={styles.subtitle}>La mejor ropa drip en una tienda.</p>
           <div className={styles.heroButtons}>
             <Link href="/categoria/remeras" className={styles.primaryButton}>
@@ -35,7 +35,7 @@ export default async function Home() {
       <section className={styles.categories}>
         <h2 className={styles.sectionTitle}>CATEGORÍAS</h2>
         <div className={styles.categoryGrid}>
-          {['Remeras', 'Pantalones', 'Gorras', 'Conjuntos'].map((cat) => (
+          {['Remeras', 'Pantalones', 'Gorras', 'Conjuntos', 'Zapatillas', 'Abrigo', 'Accesorios'].map((cat) => (
             <Link key={cat} href={`/categoria/${cat.toLowerCase()}`} className={styles.categoryCard}>
               <div className={styles.categoryName}>{cat}</div>
             </Link>
@@ -45,7 +45,7 @@ export default async function Home() {
 
       <section id="destacados" className={styles.featured}>
         <h2 className={styles.sectionTitle}>DESTACADOS</h2>
-        
+
         {featuredProducts.length === 0 ? (
           <div className={styles.featuredGrid}>
             <div className={styles.placeholderCard}>
@@ -56,7 +56,7 @@ export default async function Home() {
           <div className={styles.featuredGrid}>
             {featuredProducts.map((product) => {
               let imgs: string[] = [];
-              try { imgs = JSON.parse(product.images); } catch {}
+              try { imgs = JSON.parse(product.images); } catch { }
               const mainImg = imgs[0] || null;
 
               return (

@@ -10,7 +10,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at center, rgba(51, 116, 255, 0.15) 0%, var(--background) 70%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.postimg.cc/b8rbVWp9/Diseno-sin-titulo-(5).png");
+  background-size: cover;
+  background-position: center;
   border-bottom: 1px solid var(--border);
   position: relative;
   overflow: hidden;
@@ -28,6 +30,7 @@
   letter-spacing: -3px;
   line-height: 1;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .highlight {
@@ -37,8 +40,9 @@
 
 .subtitle {
   font-size: 1.5rem;
-  color: #a0a0a0;
+  color: #eaeaea;
   margin-bottom: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .heroButtons {
@@ -72,13 +76,16 @@
 }
 
 .secondaryButton {
-  background: transparent;
-  color: var(--foreground);
-  border: 2px solid var(--border);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  backdrop-filter: blur(5px);
 }
 
 .secondaryButton:hover {
-  border-color: var(--foreground);
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
   transform: translateY(-2px);
 }
 

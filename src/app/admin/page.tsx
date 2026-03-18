@@ -158,6 +158,9 @@ export default function AdminDashboard() {
                 <option value="pantalones">Pantalones</option>
                 <option value="gorras">Gorras</option>
                 <option value="conjuntos">Conjuntos</option>
+                <option value="zapatillas">Zapatillas</option>
+                <option value="abrigo">Abrigo</option>
+                <option value="accesorios">Accesorios</option>
               </select>
             </div>
             <div className={styles.inputGroup}>
