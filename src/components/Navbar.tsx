@@ -29,13 +29,13 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          BASTI  PA.
+          DRIP ARG.
         </Link>
 
         {/* Desktop links */}
         <div className={styles.navLinks}>
-          <div 
-            className={styles.dropdownContainer} 
+          <div
+            className={styles.dropdownContainer}
             ref={dropdownRef}
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}

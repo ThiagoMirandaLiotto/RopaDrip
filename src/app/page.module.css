@@ -271,4 +271,12 @@
     flex: 0 0 85%;
     scroll-snap-align: start;
   }
+
+  .featuredItemImg {
+    aspect-ratio: 7/5;
+  }
+
+  .categoryCard {
+    aspect-ratio: 7/5;
+  }
 }
