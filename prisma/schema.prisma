@@ -4,8 +4,8 @@ generator client {
 
 datasource db {
   provider  = "postgresql"
-  url       = env("DATABASE_URL")     // Usa Pooling para las consultas rápidas de tu app
-  directUrl = env("DATABASE_URL_UNPOOLED") // Conexión directa (necesaria para migraciones)
+  url       = env("bdddrip_POSTGRES_PRISMA_URL")     // Usa Pooling para las consultas rápidas de tu app
+  directUrl = env("bdddrip_DATABASE_URL_UNPOOLED") // Conexión directa (necesaria para migraciones)
 }
 
 model Product {
