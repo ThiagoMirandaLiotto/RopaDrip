@@ -2,6 +2,8 @@ import styles from './page.module.css';
 import Link from 'next/link';
 import prisma from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   // Fetch featured products from the database
   let featuredProducts: { id: number; title: string; price: number; images: string }[] = [];

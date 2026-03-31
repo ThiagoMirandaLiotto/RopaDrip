@@ -2,6 +2,8 @@ import styles from './page.module.css';
 import Link from 'next/link';
 import prisma from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 const categories: Record<string, string> = {
   remeras: 'REMERAS',
   pantalones: 'PANTALONES',
