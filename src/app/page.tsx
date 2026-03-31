@@ -35,7 +35,7 @@ export default async function Home() {
       <section className={styles.categories}>
         <h2 className={styles.sectionTitle}>CATEGORÍAS</h2>
         <div className={styles.categoryGrid}>
-          {['Remeras', 'Pantalones', 'Gorras', 'Conjuntos', 'Zapatillas', 'Abrigo', 'Accesorios'].map((cat) => (
+          {['Remeras', 'Pantalones', 'Conjuntos', 'Shorts', 'Zapatillas', 'Abrigos', 'Accesorios'].map((cat) => (
             <Link key={cat} href={`/categoria/${cat.toLowerCase()}`} className={styles.categoryCard}>
               <div className={styles.categoryName}>{cat}</div>
             </Link>

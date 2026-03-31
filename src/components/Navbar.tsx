@@ -47,10 +47,10 @@ export default function Navbar() {
             <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownMenuOpen : ''}`}>
               <Link href="/categoria/remeras" className={styles.dropdownItem} onClick={closeMenu}>Remeras</Link>
               <Link href="/categoria/pantalones" className={styles.dropdownItem} onClick={closeMenu}>Pantalones</Link>
-              <Link href="/categoria/gorras" className={styles.dropdownItem} onClick={closeMenu}>Gorras</Link>
               <Link href="/categoria/conjuntos" className={styles.dropdownItem} onClick={closeMenu}>Conjuntos</Link>
+              <Link href="/categoria/shorts" className={styles.dropdownItem} onClick={closeMenu}>Shorts</Link>
               <Link href="/categoria/zapatillas" className={styles.dropdownItem} onClick={closeMenu}>Zapatillas</Link>
-              <Link href="/categoria/abrigo" className={styles.dropdownItem} onClick={closeMenu}>Abrigo</Link>
+              <Link href="/categoria/abrigo" className={styles.dropdownItem} onClick={closeMenu}>Abrigos</Link>
               <Link href="/categoria/accesorios" className={styles.dropdownItem} onClick={closeMenu}>Accesorios</Link>
             </div>
           </div>
@@ -75,10 +75,10 @@ export default function Navbar() {
         <div className={styles.mobileCategoryTitle}>CATEGORÍAS</div>
         <Link href="/categoria/remeras" className={styles.mobileLink} onClick={closeMenu}>Remeras</Link>
         <Link href="/categoria/pantalones" className={styles.mobileLink} onClick={closeMenu}>Pantalones</Link>
-        <Link href="/categoria/gorras" className={styles.mobileLink} onClick={closeMenu}>Gorras</Link>
         <Link href="/categoria/conjuntos" className={styles.mobileLink} onClick={closeMenu}>Conjuntos</Link>
+        <Link href="/categoria/shorts" className={styles.mobileLink} onClick={closeMenu}>Shorts</Link>
         <Link href="/categoria/zapatillas" className={styles.mobileLink} onClick={closeMenu}>Zapatillas</Link>
-        <Link href="/categoria/abrigo" className={styles.mobileLink} onClick={closeMenu}>Abrigo</Link>
+        <Link href="/categoria/abrigo" className={styles.mobileLink} onClick={closeMenu}>Abrigos</Link>
         <Link href="/categoria/accesorios" className={styles.mobileLink} onClick={closeMenu}>Accesorios</Link>
         <div style={{ margin: '1rem 0', borderTop: '1px solid #333' }}></div>
         <Link href="/como-pedir" className={styles.mobileLinkSpecial} onClick={closeMenu}>¿Cómo Pedir?</Link>

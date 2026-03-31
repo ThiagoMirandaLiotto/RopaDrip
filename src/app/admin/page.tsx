@@ -25,6 +25,7 @@ export default function AdminDashboard() {
   const [imageUrls, setImageUrls] = useState(['']); // Array of text inputs
   const [isFeatured, setIsFeatured] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [filterCategory, setFilterCategory] = useState('todas');
   
   const fetchProducts = async () => {
     try {
@@ -156,10 +157,10 @@ export default function AdminDashboard() {
               <select value={category} onChange={(e)=>setCategory(e.target.value)} className={styles.input}>
                 <option value="remeras">Remeras</option>
                 <option value="pantalones">Pantalones</option>
-                <option value="gorras">Gorras</option>
                 <option value="conjuntos">Conjuntos</option>
+                <option value="shorts">Shorts</option>
                 <option value="zapatillas">Zapatillas</option>
-                <option value="abrigo">Abrigo</option>
+                <option value="abrigo">Abrigos</option>
                 <option value="accesorios">Accesorios</option>
               </select>
             </div>
@@ -226,6 +227,31 @@ export default function AdminDashboard() {
 
         <div className={styles.card}>
           <h2>Productos Existentes ({products.length})</h2>
+
+          {/* Filtro por categoría */}
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
+            {['todas', 'remeras', 'pantalones', 'conjuntos', 'shorts', 'zapatillas', 'abrigo', 'accesorios'].map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setFilterCategory(cat)}
+                style={{
+                  padding: '6px 14px',
+                  borderRadius: '20px',
+                  border: '1px solid #444',
+                  background: filterCategory === cat ? '#fff' : 'transparent',
+                  color: filterCategory === cat ? '#000' : '#ccc',
+                  cursor: 'pointer',
+                  fontSize: '0.8rem',
+                  fontWeight: filterCategory === cat ? '600' : '400',
+                  textTransform: 'capitalize',
+                  transition: 'all 0.15s',
+                }}
+              >
+                {cat === 'todas' ? 'Todas' : cat}
+              </button>
+            ))}
+          </div>
+
           {loadingProducts ? (
             <div className={styles.emptyState}>Cargando productos...</div>
           ) : products.length === 0 ? (
@@ -234,7 +260,9 @@ export default function AdminDashboard() {
             </div>
           ) : (
             <div className={styles.productList}>
-              {products.map(product => (
+              {products
+                .filter(p => filterCategory === 'todas' || p.category === filterCategory)
+                .map(product => (
                 <div key={product.id} className={styles.productItem}>
                   <div className={styles.productInfo}>
                     <span className={styles.productTitle}>

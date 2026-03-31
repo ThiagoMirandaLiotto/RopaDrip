@@ -5,8 +5,11 @@ import prisma from '@/lib/prisma';
 const categories: Record<string, string> = {
   remeras: 'REMERAS',
   pantalones: 'PANTALONES',
-  gorras: 'GORRAS',
-  conjuntos: 'CONJUNTOS'
+  conjuntos: 'CONJUNTOS',
+  shorts: 'SHORTS',
+  zapatillas: 'ZAPATILLAS',
+  abrigo: 'ABRIGOS',
+  accesorios: 'ACCESORIOS',
 };
 
 export default async function CategoryPage({ params }: { params: { slug: string } }) {
