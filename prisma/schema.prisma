@@ -4,8 +4,8 @@ generator client {
 
 datasource db {
   provider  = "postgresql"
-  url       = env("postgresql://neondb_owner:npg_7GQ9mjfHcALS@ep-green-boat-ad771gvz-pooler.c-2.us-east-1.aws.neon.tech/neondb?channel_binding=require&connect_timeout=15&sslmode=require")     // Usa Pooling para las consultas rápidas de tu app
-  directUrl = env("postgresql://neondb_owner:npg_7GQ9mjfHcALS@ep-green-boat-ad771gvz.c-2.us-east-1.aws.neon.tech/neondb?channel_binding=require&sslmode=require") // Conexión directa (necesaria para migraciones)
+  url       = env("DATABASE_URL")     // Usa Pooling para las consultas rápidas de tu app
+  directUrl = env("DIRECT_URL") // Conexión directa (necesaria para migraciones)
 }
 
 model Product {
